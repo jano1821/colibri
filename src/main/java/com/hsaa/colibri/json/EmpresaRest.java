@@ -1,10 +1,10 @@
-package com.hssa.colibri.jsons;
+package com.hsaa.colibri.json;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class SSEmpresaRest {
+public class EmpresaRest {
 	
 	@JsonProperty("id")
 	private int id;
