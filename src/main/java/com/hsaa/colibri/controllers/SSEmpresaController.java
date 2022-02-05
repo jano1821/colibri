@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hsaa.colibri.services.SSEmpresaService;
+import com.hsaa.colibri.service.adminSistema.EmpresaService;
 import com.hssa.colibri.jsons.SSEmpresaRest;
 
 @RestController
@@ -17,7 +17,7 @@ import com.hssa.colibri.jsons.SSEmpresaRest;
 public class SSEmpresaController {
 
 	@Autowired
-	SSEmpresaService ssEmpresaService;
+	EmpresaService ssEmpresaService;
 
 	@ResponseStatus(HttpStatus.OK)
 	@RequestMapping(value = "emp"+"/{"+"id"+"}",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)

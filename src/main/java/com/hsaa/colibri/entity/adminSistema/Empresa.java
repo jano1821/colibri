@@ -1,4 +1,4 @@
-package com.hsaa.colibri.entities;
+package com.hsaa.colibri.entity.adminSistema;
 
 import java.util.List;
 
@@ -12,9 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.hsaa.colibri.entity.config.Auditoria;
+
+
 @Entity
 @Table(name = "SSTEMPR")
-public class SSEmpresa extends Auditable {
+public class Empresa extends Auditoria {
 
 	/**
 	 * 
@@ -36,7 +39,7 @@ public class SSEmpresa extends Auditable {
 	private String abreviatura;
 	 
 	 @OneToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY, mappedBy = "ssEmpresa") 
-	private List<SSDependencia> lstDependencias;
+	private List<Dependencia> lstDependencias;
 	
 	
 	public int getId() {
@@ -63,10 +66,10 @@ public class SSEmpresa extends Auditable {
 	public void setAbreviatura(String abreviatura) {
 		this.abreviatura = abreviatura;
 	}
-	public List<SSDependencia> getLstDependencias() {
+	public List<Dependencia> getLstDependencias() {
 		return lstDependencias;
 	}
-	public void setLstDependencias(List<SSDependencia> lstDependencias) {
+	public void setLstDependencias(List<Dependencia> lstDependencias) {
 		this.lstDependencias = lstDependencias;
 	}
 	

@@ -1,4 +1,4 @@
-package com.hsaa.colibri.entities;
+package com.hsaa.colibri.entity.adminSistema;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,9 +10,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.hsaa.colibri.entity.config.Auditoria;
+
 @Entity
 @Table(name = "SSTUSUA")
-public class SSUsuario extends Auditable {
+public class Usuario extends Auditoria {
 
 	/**
 	 * 
@@ -32,7 +34,7 @@ public class SSUsuario extends Auditable {
 	 
 	@ManyToOne(cascade = {}, fetch = FetchType.LAZY)
     @JoinColumn(name = "N_CODDEP", unique = false, nullable = false)
-	private SSDependencia ssDependencia;
+	private Dependencia ssDependencia;
 	
 	
 	public int getId() {
@@ -53,10 +55,10 @@ public class SSUsuario extends Auditable {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public SSDependencia getSsDependencia() {
+	public Dependencia getSsDependencia() {
 		return ssDependencia;
 	}
-	public void setSsDependencia(SSDependencia ssDependencia) {
+	public void setSsDependencia(Dependencia ssDependencia) {
 		this.ssDependencia = ssDependencia;
 	}
 	

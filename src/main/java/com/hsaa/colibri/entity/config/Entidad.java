@@ -1,4 +1,4 @@
-package com.hsaa.colibri.entities;
+package com.hsaa.colibri.entity.config;
 
 import java.io.Serializable;
 

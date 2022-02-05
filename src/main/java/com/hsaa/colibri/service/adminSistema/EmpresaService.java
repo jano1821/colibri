@@ -1,8 +1,8 @@
-package com.hsaa.colibri.services;
+package com.hsaa.colibri.service.adminSistema;
 
 import com.hssa.colibri.jsons.SSEmpresaRest;
 
-public interface SSEmpresaService {
+public interface EmpresaService {
 
 	SSEmpresaRest findByID(Integer id);
 

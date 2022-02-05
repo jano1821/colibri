@@ -1,4 +1,4 @@
-package com.hsaa.colibri.services.impl;
+package com.hsaa.colibri.service.impl.adminSistema;
 
 import java.util.Optional;
 
@@ -8,16 +8,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ConfigurationCondition.ConfigurationPhase;
 import org.springframework.stereotype.Service;
 
-import com.hsaa.colibri.entities.SSEmpresa;
-import com.hsaa.colibri.repositories.SSEmpresaRepository;
-import com.hsaa.colibri.services.SSEmpresaService;
+import com.hsaa.colibri.entity.adminSistema.Empresa;
+import com.hsaa.colibri.repository.adminSistema.EmpresaRepository;
+import com.hsaa.colibri.service.adminSistema.EmpresaService;
 import com.hssa.colibri.jsons.SSEmpresaRest;
 
 @Service
-public class SSEmpresaServiceImpl implements SSEmpresaService {
+public class EmpresaServiceImpl implements EmpresaService {
 
 	@Autowired
-	SSEmpresaRepository ssEmpresaRepository;
+	EmpresaRepository ssEmpresaRepository;
 
 	public static final ModelMapper MODEL_MAPPER = new ModelMapper();
 
@@ -25,7 +25,7 @@ public class SSEmpresaServiceImpl implements SSEmpresaService {
 	public SSEmpresaRest findByID(Integer id) {
 //		MODEL_MAPPER.getConfiguration().setFieldMatchingEnabled(true)
 //		.setFieldAccessLevel(Configuration.AccessLevel.PRIVATE);
-		Optional<SSEmpresa> s = ssEmpresaRepository.findById(id);
+		Optional<Empresa> s = ssEmpresaRepository.findById(id);
 		return MODEL_MAPPER.map(s, SSEmpresaRest.class);
 	}
 

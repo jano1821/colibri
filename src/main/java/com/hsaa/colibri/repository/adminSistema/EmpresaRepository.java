@@ -1,11 +1,11 @@
-package com.hsaa.colibri.repositories;
+package com.hsaa.colibri.repository.adminSistema;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.hsaa.colibri.entities.SSEmpresa;
+import com.hsaa.colibri.entity.adminSistema.Empresa;
 
 @Repository
-public interface SSEmpresaRepository extends JpaRepository<SSEmpresa, Integer>{
+public interface EmpresaRepository extends JpaRepository<Empresa, Integer>{
 
 }

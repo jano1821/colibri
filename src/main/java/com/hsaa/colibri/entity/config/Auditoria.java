@@ -8,7 +8,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @MappedSuperclass
-public class Auditoria {
+public class Auditoria implements Entidad{
 	
 	@Column(name = "A_ESTREG", nullable = false, length = 1, insertable = true, updatable = true)
 	private String estadoRegistro;
